@@ -1,0 +1,28 @@
+# English Premier League Matches 2015-17 information-single page application(SPA)-using AngularJs
+
+In this application, I've created an SPA, in which only 'index.html' page is used to display all the different views:
+
+1) Index-view
+2) Match-view
+3) Team-view
+
+## Index-view:
+	Index-view is the default view of this app, it is loaded as soon as 'index.html' page is displayed. This view will show all the matches played in 2015-16-17.
+You can different 'filters' to filter the result.
+
+## Match-view:
+	This view will display match information, like- match date, round name and winner team name. To display this view click on the any of the 'Match Details' column and you will be redirected to the match view. To go back to the home page click on the 'Home' button.
+
+## Team-view:
+	This view will display team statistics, like- total matches played, won, lost,tie, total goals scored in 2015-16, 2016-17 and the total i.e.2015-16-17. To enable this view you have two alternatives:
+	
+	1) through index-view
+	2) through match-view
+	
+	### through index-view: 
+		Click on any of the team name of the 'Team 1' or 'Team 2' column.
+		
+	### through match-view:
+		Click on any of the team name.
+		
+	To go back to the home page click on the 'Home' button.

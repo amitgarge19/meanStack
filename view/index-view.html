@@ -1,0 +1,128 @@
+<!--The index-view file-->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-lg-3 ">
+        <!-- filters starts here -->
+        <nav class="navbar navbar-default " id="sideNav">
+          <div align="center" class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Filters</a>
+          </div>
+          <!--Different filters with different search criteria-->
+          <div class="collapse navbar-collapse sidebar" id="bs-example-navbar-collapse-1">
+            <div class="navbar-nav nav">
+              <form class="form-horizontal">
+                <!--Searching by team name-->
+                <div class="form-group nav-item">
+                  <label class=" col-xs-12 nav-link js-scroll-trigger">Search By Team Name: </label>
+                  <div class="col-xs-12">
+                    <input id="name" type="text" class="form-control" ng-model="searchTeam" placeholder="Enter Team Name" />
+                  </div>
+                </div>
+                <!--Searching by team code-->
+                <div class="form-group nav-item">
+                  <label class=" col-xs-12 nav-link js-scroll-trigger">Search By Team Code: </label>
+                  <div class="col-xs-12">
+                    <input type="text" id="code" class="search form-control input-sm" ng-model="searchCode" placeholder="Enter Team Code" />
+                  </div>
+                </div>
+                <!--Search by team 1 goals-->
+                <div class="form-group nav-item">
+                  <label class=" col-xs-12 nav-link js-scroll-trigger">Search By Team 1 Goals: </label>
+                  <div class="col-xs-12">
+                    <input type="text" id="score1" class="search form-control input-sm" ng-model="searchByScore1.score1" placeholder="Enter Team 1 goals" />
+                  </div>
+                </div>
+                <!--Search by team 1 goals-->
+                <div class="form-group nav-item">
+                  <label class=" col-xs-12 nav-link js-scroll-trigger">Search By Team 2 Goals: </label>
+                  <div class="col-xs-12">
+                    <input type="text" class="search form-control input-sm" ng-model="searchByScore2.score2" placeholder="Enter Team 2 goals" />
+                  </div>
+                </div>
+                <!--Search by year-->
+                <div class="form-group nav-item">
+                  <label class=" col-xs-12 nav-link js-scroll-trigger">Search By Year: </label>
+                  <div class="col-xs-12">
+                    <input type="text" class="search form-control input-sm" ng-model="searchByYear" placeholder="Enter Year" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- filters end -->
+
+      <!-- Match table starts here -->
+      <div class="col-md-9 col-lg-9">
+        <div class="allDataTable table-responsive-sm text-center">
+          <table class="table">
+            <!--The header's part-->
+            <thead>
+              <tr>
+                <th class="text-center fit">
+                  Date
+                </th>
+                <th class="text-center fit">
+                  Team 1
+                </th>
+                <th class="text-center fit">
+                  Scores
+                </th>
+                <th class="text-center fit">
+                  Team 2
+                </th>
+                <th class="text-center fit">
+                  Match Details <!--Round name-->
+                </th>
+              </tr>
+            </thead>
+            <!--The table body-->
+            <tbody ng-repeat='round in myData.combinedData '>
+              <!--Display the match details as per the filters' criteia-->
+              <a ng-href="'#/view-match/{{ match.date | date:'yyyMMdd' }}/{{ match.team1.code }}/vs/{{ match.team2.code }}'" title="View Match Full Details">
+
+              <tr class="clickable-row" ng-repeat="match in round.matches  | filter:searchTeam | filter:searchByScore1 | filter:searchByScore2 | filter:searchByYear | filter:searchCode">
+
+                <!--Date of the match-->
+                <td class="text-center">
+                  {{ match.date | date }}
+                </td>
+
+                <!--team 1 name; clicking on the link will redirect to the page with team details -->
+                <td class="text-right">
+                  <a ng-href="#/team-view/{{ match.team1.code }}/{{ match.team1.key }}" title="View Team Statistics">{{ match.team1.name }}</a>
+                </td>
+
+                <!--scores of both the teams-->
+                <td class="text-center">
+                  <div class="score">{{match.score1}} - {{match.score2}}</div>
+                </td>
+
+                <!--team 2 name;clicking on the link will redirect to the page with team details-->
+                <td class="text-left"> <a ng-href="#/team-view/{{ match.team2.code }}/{{ match.team2.key }}" title="View Team Statistics">{{ match.team2.name }}</a>
+                </td>
+
+                <!--The match round name; clicking on the link will redirect to the page with match details-->
+                <td class="text-center"> <a ng-href='#/view-match/{{ match.date | date:"yyyyMMdd" }}/{{ match.team1.code }}/vs/{{ match.team2.code }}' title="View Match Full Details">{{round.name}}</a>
+                </td>
+              </tr>
+              </a>
+            </tbody>
+          </table>
+        </div>
+        <!--  Match table ends -->
+      </div>
+      <!-- col ends -->
+    </div>
+    <!--  row ends -->
+  </div>
+  <!-- container-fluid ends -->
+</section>

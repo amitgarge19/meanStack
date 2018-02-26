@@ -1,0 +1,68 @@
+img {
+  width: 100%;
+}
+
+body {
+  font: 18px Montserrat, sans-serif;
+  /*Font taken from https://fonts.googleapis.com/css?family=Montserrat*/
+  line-height: 1.8;
+  background-color: #eff9cf;
+}
+
+/*filters div id is sideNav*/
+#sideNav {
+  background-color: transparent;
+}
+
+/*Score's style*/
+.score {
+  background-color: #38003C;
+  color: #ffffff;
+  font: 18px Montserrat, sans-serif;
+  min-width: 80px;
+  max-width: 80px;
+}
+
+/*score in match-view.html file*/
+.score-match-view {
+  background-color: #E90052;
+  color: #ffffff;
+  font: 24px Montserrat, sans-serif;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+
+/*team name in match-view.html file*/
+.team {
+  font: 24px Montserrat, sans-serif;
+}
+
+/*Row of the table in index.html*/
+a {
+   display:block
+}
+.clickable-row:hover {
+  background-color: #f4d7f2;
+  
+  cursor: pointer;
+}
+
+/*Cursor will be changed pointer when hovers on the team name with link*/
+.teamLink:hover {
+  color: #E90052;
+  cursor: pointer;
+}
+
+/*Anchor tag 'a' styles*/
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}

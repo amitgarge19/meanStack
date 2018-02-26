@@ -1,0 +1,125 @@
+<!--The team-view (Team details) file-->
+<section class="appSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="allDataTable table-responsive text-center ">
+          <!--Name of the team-->
+          <h1> <strong><span ng-show="teamDetails.teamname1">{{teamDetails.teamname1}}</span></strong></h1>
+
+          <h2>Team Statistics</h2>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th class="text-center"> Stats </th>
+                <th class="text-center">
+                  2015-16
+                </th>
+                <th class="text-center">
+                  2016-17
+                </th>
+                <th class="text-center">
+                  Total
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <!--Total matches played by the team-->
+                <td>
+                  <strong>Played</strong>
+                </td>
+                <td>
+                  <!--Total matches played by the team in 2015-16-->
+                  {{teamDetails.totalMatchesPlayed2015_16.length}}
+                </td>
+                <td>
+                  <!--Total matches played by the team in 2016-17-->
+                  {{teamDetails.totalMatchesPlayed2016_17.length}}
+                </td>
+                <td>
+                  <!--Total matches played by the team in 2015-16-17-->
+                  {{teamDetails.totalMatchesPlayed}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Won</strong>
+                </td>
+                <td>
+                  <!--Total matches won by the team in 2015-16-->
+                  {{teamDetails.totalWins2015_16.length}}
+                </td>
+                <td>
+                  <!--Total matches won by the team in 2016-17-->
+                  {{teamDetails.totalWins2016_17.length}}
+                </td>
+                <td>
+                  <!--Total matches won by the team in 2015-16-17-->
+                  {{teamDetails.totalWins}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Lost</strong>
+                </td>
+                <td>
+                  <!--Total matches lost by the team in 2015-16-->
+                  {{teamDetails.totalLost2015_16.length}}
+                </td>
+                <td>
+                  <!--Total matches lost by the team in 2016-17-->
+                  {{teamDetails.totalLost2016_17.length}}
+                </td>
+                <td>
+                  <!--Total matches lost by the team in 2015-16-17-->
+                  {{teamDetails.totalLost}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Tie</strong>
+                </td>
+                <td>
+                  <!--Total matches drawn of the team in 2015-16-->
+                  {{teamDetails.totaltie2015_16.length}}
+                </td>
+                <td>
+                  <!--Total matches drawn of the team in 2016-17-->
+                  {{teamDetails.totaltie2016_17.length}}
+                </td>
+                <td>
+                  <!--Total matches drawn of the team in 2015-16-17-->
+                  {{teamDetails.totaltie}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Goals Scored</strong>
+                </td>
+                <td>
+                  <!--Total goals scored by the team in 2015-16-->
+                  {{teamDetails.totalgoals2015_16}}
+                </td>
+                <td>
+                  <!--Total goals scored by the team in 2016-17-->
+                  {{teamDetails.totalgoals2016_17}}
+                </td>
+                <td>
+                  <!--Total goals scored by the team in 2015-16-17-->
+                  {{teamDetails.totalgoals}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="#/" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-home"> </span> Home </a>
+          <br/><br />
+        </div>
+        <!--  allDatatable ends -->
+      </div>
+      <!-- col ends -->
+    </div>
+    <!--  row ends -->
+  </div>
+  <!-- container ends -->
+</section>

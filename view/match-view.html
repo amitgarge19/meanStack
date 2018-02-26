@@ -1,0 +1,68 @@
+<!--The match-view (Match details) file-->
+<section class="appSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="allDataTable table-responsive text-center">
+          <br/>
+          <table class="table table-hover table-condensed">
+            <tbody>
+              <tr>
+                <!--team 1 name; clicking on the link will redirect to the page with team details -->
+                <td class="text-right team">
+                  <a class="teamLink" ng-href="#/team-view/{{matchDetails.teamCode1}}/{{ matchDetails.teamKey1 }}" title="View Team Statistics">{{matchDetails.teamName1}}</a>
+                </td>
+                <!--scores of both the teams-->
+                <td class="text-center">
+                  <div class="score-match-view">{{matchDetails.teamScore1}} - {{matchDetails.teamScore2}}
+                  </div>
+                </td>
+
+                <!--team 2 name; clicking on the link will redirect to the page with team details -->
+                <td class="text-left team">
+                  <a class="teamLink" ng-href="#/team-view/{{matchDetails.teamCode2}}/{{ matchDetails.teamKey2 }}" title="View Team Statistics">{{matchDetails.teamName2}}</a>
+                </td>
+              </tr>
+              <!--Match details starts here-->
+              <tr>
+                <td class="text-right">
+                  <strong>Round Name:</strong>
+                </td>
+                <td class="text-left" colspan="2">
+                  {{matchDetails.roundName}}
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right">
+                  <strong> Match Date:</strong>
+                </td>
+                <td class="text-left" colspan="2">
+                  {{matchDetails.matchDate | date: "fullDate"}}
+                </td>
+              </tr>
+              <tr>
+                <!--Winner team name-->
+                <td class="text-right">
+                  <strong>Winner Team name:</strong>
+                </td>
+                <td class="text-left" colspan="2">
+                  {{matchDetails.matchWinner}}
+                </td>
+              </tr>
+              <tr>
+                <!--Iw will redirect to home page i.e.index.html-->
+                <td colspan="3" class="fit">
+                  <a href="#/" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-home"></span> Home</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- table div end -->
+      </div>
+      <!-- col end -->
+    </div>
+    <!--  row end -->
+  </div>
+  <!-- container-fluid end -->
+</section>

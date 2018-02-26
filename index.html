@@ -1,0 +1,52 @@
+<!--The home page -->
+<!DOCTYPE html>
+<!-- The declaration of ng-app directive, which shows the starting of the angular app -->
+<html ng-app="eplApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="English Premier League SPA Application using Angular Js">
+    <title>English Premier League</title>
+
+    <!-- Bootstrap's stylesheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--Custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Font awesome cdn-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!--Icon file-->
+    <link rel="icon" href="images/logo.ico">
+  </head>
+
+  <body>
+  	<!--Image container starts-->
+    <div class="container">
+    	<!--path of the image-->
+      <img src="images/epl.jpg" class="img-responsive" alt="English Premier League">
+    </div>
+	<!--Image container ends-->
+    <br/>
+    <!--The 'ng-view' directive within the div tag shows that the 'views' will be displayed here-->
+    <div ng-view></div>
+
+    <!-- andular app section ends -->
+
+    <!-- JavaScript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--The angularjs cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <!--The cdn for routing in angularjs-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+    <!--The 'angular-controllers' file path-->
+    <script src="angular/controller.js"></script>
+    <!--The 'routing-information' file path-->
+    <script src="angular/route.js"></script>
+  </body>
+</html>
